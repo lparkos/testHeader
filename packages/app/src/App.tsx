@@ -33,6 +33,10 @@ import { AppRouter, FlatRoutes } from '@backstage/core-app-api';
 import { CatalogGraphPage } from '@backstage/plugin-catalog-graph';
 import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
+import { BreadcrumbTestPage } from '@internal/plugin-breadcrumb-test';
+import { BreadcrumbsTestPage } from '@internal/plugin-breadcrumbs-test';
+import { BreadcrumbsPage } from '@internal/plugin-breadcrumbs';
+import { NewHeaderPage } from '@internal/plugin-new-header';
 
 const app = createApp({
   apis,
@@ -91,6 +95,10 @@ const routes = (
     </Route>
     <Route path="/settings" element={<UserSettingsPage />} />
     <Route path="/catalog-graph" element={<CatalogGraphPage />} />
+    <Route path="/breadcrumb-test" element={<BreadcrumbTestPage />} />
+    <Route path="/breadcrumbs-test" element={<BreadcrumbsTestPage />} />
+    <Route path="/breadcrumbs" element={<BreadcrumbsPage />} />
+    <Route path="/new-header" element={<NewHeaderPage />} />
   </FlatRoutes>
 );
 
